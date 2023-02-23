@@ -57,7 +57,7 @@ function chat_identifier(isAi, value, uniqueId) {
             <div class="chat">
                 <div class="profile">
                     <img 
-                      src=${isAi ? bot.src : user.src} 
+                      src=${isAi ? bot : user} 
                       alt="${isAi ? "bot" : "user"}" 
                       class="chat_profile"
                     />
