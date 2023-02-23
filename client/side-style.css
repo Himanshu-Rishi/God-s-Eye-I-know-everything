@@ -1,0 +1,742 @@
+:root {
+
+  --rishi-color-brand: #353535;
+
+  /* COLOR PALETTE */
+
+  --rishi-color-n-000: #fff;
+  --rishi-color-n-100: #ebebeb;
+  --rishi-color-n-300: #aeaeae;
+  --rishi-color-n-500: #353535;
+  --rishi-color-n-700: #282828;
+  --rishi-color-n-900: #1a1a1a;
+
+  /* BACKGROUND COLOR */
+  
+  --rishi-color-background-primary: #10172a;
+
+  /* BORDER COLOR */
+
+  --rishi-color-border: var(--rishi-color-n-100);
+  
+  /* FORM COLOR */
+
+  --rishi-color-form-input: var(--rishi-color-n-100);
+
+  /* TYPOGRAPHY COLOR */
+
+  --rishi-color-typography-heading: var(--rishi-color-n-000);
+  --rishi-color-typography-body   : var(--rishi-color-n-300);
+  --rishi-color-typography-note   : ;
+  --rishi-color-typography-button : var(--rishi-color-n-000);
+
+  /*------------------------------------------------------------
+  |
+  | 1.2 TYPOGRAPHY
+  |
+  ------------------------------------------------------------*/
+
+  --rishi-typography-typeface: "Inter", sans-serif;
+
+  /* FONT SIZE */
+
+  --rishi-typography-h1: 1.9375rem;
+  --rishi-typography-h2: 1.5625rem;
+  --rishi-typography-h4: 1rem;
+  --rishi-typography-p : 1rem;
+  --rishi-typography-s : .8125rem;
+
+  /* LEADING */
+
+  --rishi-typography-h1-leading: 1.2;
+  --rishi-typography-h2-leading: 1.2;
+  --rishi-typography-h4-leading: 1.25;
+  --rishi-typography-p-leading : 1.5;
+
+  /* MARGIN */
+
+  --rishi-typography-margin-heading: .75rem;
+  --rishi-typography-margin-body   : 1.125rem;
+
+  /*------------------------------------------------------------
+  |
+  | 1.3 LAYOUT
+  |
+  ------------------------------------------------------------*/
+  
+  --rishi-layout-container: 1.25rem;
+  --rishi-layout-grid     : 3.625rem;
+  --rishi-layout-gutter   : 1rem;
+
+  /* GAP */
+
+  --rishi-gap-cta    : .75rem;
+  --rishi-gap-content: 1.25rem;
+
+  /* BORDER RADIUS */
+  
+  --rishi-radius-button: 5rem;
+  --rishi-radius-input : 5rem;
+  --rishi-radius-card  : .5rem;
+
+}
+
+/*--------------------------------------------------------------
+2.0 FOUNDATION
+--------------------------------------------------------------*/
+
+html { box-sizing: border-box; }
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
+
+body {
+  background-color: var(--rishi-color-background-primary);
+  color: var(--rishi-color-typography-body);
+  font-family: var(--rishi-typography-typeface);
+  font-feature-settings: "liga", "kern";
+  font-size: var(--rishi-typography-p);
+  font-weight: 400;
+  line-height: var(--rishi-typography-p-leading);
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*--------------------------------------------------------------
+3.0 TYPOGRAPHY
+--------------------------------------------------------------*/
+
+a {
+  color: var(--rishi-color-brand);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h4,
+p { margin-top: 0; }
+
+h1,
+h2,
+h4 { color: var(--rishi-color-typography-heading); }
+
+h1,
+h2 { margin-bottom: var(--rishi-typography-margin-heading); }
+
+h1 {
+  font-size: var(--rishi-typography-h1);
+  line-height: var(--rishi-typography-h1-leading);
+}
+
+h2 {
+  font-size: var(--rishi-typography-h2);
+  line-height: var(--rishi-typography-h2-leading);
+}
+
+h4 {
+  font-size: var(--rishi-typography-h4);
+  line-height: var(--rishi-typography-h4-leading);
+}
+
+p { margin-bottom: var(--rishi-typography-margin-body); }
+
+p:last-child { margin-bottom: 0; }
+
+strong { font-weight: 700; }
+
+small { font-size: var(--rishi-typography-s); }
+
+.rishi-text-note {
+  color: var(--rishi-color-typography-note);
+  line-height: 1;
+}
+
+/*--------------------------------------------------------------
+4.0 IMAGE
+--------------------------------------------------------------*/
+
+img,
+svg {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+5.0 LAYOUT
+--------------------------------------------------------------*/
+
+.rishi-layout-container {
+  padding-left: var(--rishi-layout-container);
+  padding-right: var(--rishi-layout-container);
+}
+
+.rishi-layout-flex,
+.rishi-layout-grid {
+  align-items: center;
+  justify-content: center;
+}
+
+.rishi-layout-flex { display: flex; }
+
+.rishi-layout-grid { display: grid; }
+
+/*--------------------------------------------------------------
+6.0 COMPONENT
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+|
+| 6.1 CTA
+|
+--------------------------------------------------------------*/
+
+.rishi-component-cta {
+  flex-direction: column;
+  row-gap: var(--rishi-gap-cta);
+}
+
+/*--------------------------------------------------------------
+|
+| 6.2 FORM
+|
+--------------------------------------------------------------*/
+
+input,
+button {
+  color: inherit;
+  font-family: inherit;
+  font-size: var(--rishi-typography-p);
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  text-rendering: inherit;
+  text-transform: none;
+}
+
+/* FORM */
+
+form { width: 100%; }
+
+.rishi-component-form {
+  background-color: var(--rishi-color-form-input);
+  border-radius: var(--rishi-radius-input);
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: .25rem;
+}
+
+/* INPUT */
+
+::placeholder { color: var(--rishi-color-typography-note); }
+
+.rishi-component-input {
+  background-color: var(--rishi-color-form-input);
+  border: .0625rem solid var(--rishi-color-form-input);
+  border-radius: var(--rishi-radius-input);
+}
+
+.rishi-component-input-medium {
+  height: 2.5rem;
+  padding: .625rem 1rem .75rem;
+}
+
+/*--------------------------------------------------------------
+|
+| 6.3 BUTTON
+|
+--------------------------------------------------------------*/
+
+button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: block;
+  padding: 0;
+}
+
+.rishi-component-button {
+  border: .0625rem solid var(--rishi-color-brand);
+  border-radius: var(--rishi-radius-button);
+  display: block;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.rishi-component-button-primary {
+  background-color: #1e293b;
+  color: var(--rishi-color-typography-button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rishi-component-button-medium {
+  padding: .625rem .875rem .75rem;
+  width: fit-content;
+}
+
+/*--------------------------------------------------------------
+|
+| 6.4 CARD
+|
+--------------------------------------------------------------*/
+
+.rishi-component-card {
+  border: .0625rem solid var(--rishi-color-border);
+  border-radius: var(--rishi-radius-card);
+  overflow: hidden;
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.rishi-component-card--image { margin-bottom: 2.25rem; }
+
+.rishi-component-card--title { margin-bottom: .5rem; }
+
+/*--------------------------------------------------------------
+7.0 SECTION
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+|
+| 7.1 HEADER
+|
+--------------------------------------------------------------*/
+
+.rishi-section-header {
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.rishi-section-header__layout { justify-content: space-between; }
+
+/*--------------------------------------------------------------
+|
+| 7.2 HERO
+|
+--------------------------------------------------------------*/
+
+.rishi-section-hero {
+  padding-bottom: 5em;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+|
+| 7.3 CONTENT
+|
+--------------------------------------------------------------*/
+
+.rishi-section-content {
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.rishi-section-content__layout { row-gap: var(--rishi-gap-content); }
+
+/*--------------------------------------------------------------
+|
+| 7.4 CLOSE
+|
+--------------------------------------------------------------*/
+
+.rishi-section-close {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+|
+| 7.5 FOOTER
+|
+--------------------------------------------------------------*/
+
+.rishi-section-footer {
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.rishi-section-footer__layout {
+  column-gap: var(--rishi-layout-gutter);
+}
+
+.rishi-section-footer--copyright {
+  margin-bottom: 0;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+8.0 MEDIA
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+|
+| 8.1 768PX
+|
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 48rem) {
+
+  /*------------------------------------------------------------
+  VARIABLE
+  ------------------------------------------------------------*/
+  
+  :root {
+
+    /*----------------------------------------------------------
+    |
+    | TYPOGRAPHY
+    |
+    ----------------------------------------------------------*/
+
+    /* FONT SIZE */
+
+    --rishi-typography-h1: 2.1875rem;
+    --rishi-typography-h2: 1.75rem;
+    --rishi-typography-h4: 1.125rem;
+    --rishi-typography-p : 1.125rem;
+    --rishi-typography-s : .875rem;
+
+    /* MARGIN */
+
+    --rishi-typography-margin-body: 1.25rem;
+
+    /*----------------------------------------------------------
+    |
+    | LAYOUT
+    |
+    ----------------------------------------------------------*/
+
+    --rishi-layout-container: 4.25rem;
+    --rishi-layout-gutter   : 1.5rem;
+
+    /* GAP */
+
+    --rishi-gap-content: 1.5rem;
+
+  }
+
+  /*------------------------------------------------------------
+  LAYOUT
+  ------------------------------------------------------------*/
+
+  .rishi-layout-container,
+  .rishi-layout-column-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rishi-layout-grid-2 {
+    column-gap: var(--rishi-layout-gutter);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .rishi-layout-grid-2 div:nth-of-type(2) {
+    justify-self: start;
+    position: relative;
+    top: calc(50% + (var(--rishi-layout-gutter) / 2));
+  }
+
+  .rishi-layout-grid-2 div:nth-of-type(odd) { justify-self: end; }
+
+  .rishi-layout-column-4 {
+    width: calc((var(--rishi-layout-grid) * 4) +
+           (var(--rishi-layout-gutter) * 3));
+    border-color: #64748b;
+  }
+
+  .rishi-layout-column-6 {
+    width: calc((var(--rishi-layout-grid) * 6) +
+           (var(--rishi-layout-gutter) * 5));
+  }
+
+  /*------------------------------------------------------------
+  COMPONENT
+  ------------------------------------------------------------*/
+
+  /*------------------------------------------------------------
+  |
+  | CARD
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-component-card {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+
+  /*------------------------------------------------------------
+  SECTION
+  ------------------------------------------------------------*/
+
+  /*------------------------------------------------------------
+  |
+  | HEADER
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-section-header {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  /*------------------------------------------------------------
+  |
+  | CONTENT
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-section-content {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  /*------------------------------------------------------------
+  |
+  | FOOTER
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-section-footer {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  
+}
+
+/*--------------------------------------------------------------
+|
+| 8.2 1024PX
+|
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 64rem) {
+
+  /*------------------------------------------------------------
+  VARIABLE
+  ------------------------------------------------------------*/
+
+  :root {
+
+    /*----------------------------------------------------------
+    |
+    | LAYOUT
+    |
+    ----------------------------------------------------------*/
+
+    --rishi-layout-container: 0;
+  
+  }
+
+  /*------------------------------------------------------------
+  TYPOGRAPHY
+  ------------------------------------------------------------*/
+
+  a { transition: all 250ms ease; }
+
+  a:not(.rishi-component-button):hover {
+    color: var(--rishi-color-typography-body);
+  }
+
+  /*------------------------------------------------------------
+  LAYOUT
+  ------------------------------------------------------------*/
+  
+  .rishi-layout-container { width: 60rem; }
+
+}
+
+/*--------------------------------------------------------------
+|
+| 8.3 1200PX
+|
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 75rem) {
+
+  /*------------------------------------------------------------
+  VARIABLE
+  ------------------------------------------------------------*/
+
+  :root {
+
+    /*----------------------------------------------------------
+    |
+    | TYPOGRAPHY
+    |
+    ----------------------------------------------------------*/
+
+    /* FONT SIZE */
+
+    --rishi-typography-h1: 2.75rem;
+    --rishi-typography-h2: 2.1875rem;
+    --rishi-typography-h4: 1.4375rem;
+
+    /* MARGIN */
+
+    --rishi-typography-margin-heading: 1rem;
+    --rishi-typography-margin-body   : 1.75rem;
+
+    /*----------------------------------------------------------
+    |
+    | LAYOUT
+    |
+    ----------------------------------------------------------*/
+
+    --rishi-layout-grid  : 4rem;
+    --rishi-layout-gutter: 2rem;
+
+    /* GAP */
+    
+    --rishi-gap-content: 2rem;
+    
+  }
+
+  /*------------------------------------------------------------
+  TYPOGRAPHY
+  ------------------------------------------------------------*/
+
+  .rishi-text-intro { font-size: var(--rishi-typography-h4); }
+
+  /*------------------------------------------------------------
+  LAYOUT
+  ------------------------------------------------------------*/
+  
+  .rishi-layout-container { width: 70rem; }
+
+  /*------------------------------------------------------------
+  SECTION
+  ------------------------------------------------------------*/
+
+  /*------------------------------------------------------------
+  |
+  | HEADER
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-section-header {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  /*------------------------------------------------------------
+  |
+  | HERO
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-section-hero {
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem;
+  }
+
+  /*------------------------------------------------------------
+  |
+  | CONTENT
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-section-content {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+  /*------------------------------------------------------------
+  |
+  | CLOSE
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-section-close {
+    padding-bottom: 7.5rem;
+    padding-top: 7.5rem;
+  }
+  
+  /*------------------------------------------------------------
+  |
+  | FOOTER
+  |
+  ------------------------------------------------------------*/
+
+  .rishi-section-footer {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+
+}
+
+.logo
+{
+    width: 2rem;
+}
+
+.rishi-logo-section
+{
+    display: flex;
+    justify-content: center;
+}
+
+.site_title
+{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.uil-github
+{
+    font-size: 2rem;
+    color: grey;
+}
+.uil-github:hover
+{
+    color: white;
+}
+
+.button_section
+{
+    display: flex;
+    justify-content: center;
+}
+
+.first__button
+{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    padding: 0.7rem 2rem;
+    border-radius: 20px;
+    background-color: #1d40af;
+    color: white;
+    font-weight: 500;
+    
+}
+
+.second__button
+{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    padding: 0.7rem 2rem;
+    border-radius: 20px;
+    border: solid;
+    color: rgb(205, 205, 205);
+    font-weight: 500;
+    border-style: solid;
+    border-color: #64748b;
+}
+
+.uil-message
+{
+    font-size: 1.3rem;
+}

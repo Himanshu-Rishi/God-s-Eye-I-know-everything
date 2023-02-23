@@ -1,10 +1,10 @@
-import bot from "./assets/bot.png";
-import user from "./assets/programmer.png";
+// import bot from "./assets/bot.png";
+// import user from "./assets/programmer.png";
 
-// const bot = new Image();
-// bot.src  = '/assets/bot.png';
-// const user = new Image();
-// user.src  = '/assets/bot.png';
+const bot = new Image();
+bot.src  = '/assets/bot.png';
+const user = new Image();
+user.src  = '/assets/bot.png';
 
 const form = document.querySelector("form");
 const chatContainer = document.querySelector("#chat_container");
