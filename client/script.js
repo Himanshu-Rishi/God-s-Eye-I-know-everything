@@ -1,5 +1,7 @@
-import bot from "./assets/bot.png";
-import user from "./assets/programmer.png";
+const bot = new Image();
+bot.src  = './assets/bot.png';
+const user = new Image();
+user.src  = './assets/programmer.png';
 
 const form = document.querySelector("form");
 const chatContainer = document.querySelector("#chat_container");
@@ -52,7 +54,7 @@ function chat_identifier(isAi, value, uniqueId) {
             <div class="chat">
                 <div class="profile">
                     <img 
-                      src=${isAi ? bot : user} 
+                      src=${isAi ? bot.src : user.src} 
                       alt="${isAi ? "bot" : "user"}" 
                       class="chat_profile"
                     />
@@ -96,7 +98,7 @@ const handleSubmit = async (e) => {
     else
     {
       const err= await response.text();
-      messageDiv.innerHTML = "Something went wrong...";
+      messageDiv.innerHTML = "Please try again after some time, something went wrong with api...";
       alert(err);
     }
   }
