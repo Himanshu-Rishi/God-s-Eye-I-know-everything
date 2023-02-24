@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- META -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,29 +23,98 @@
     <link rel="icon" type="image/png" href="#" sizes="48x48">
     <!-- PERFORMANCE -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-    <link rel="preload" as="style" href="style.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <!-- Title -->
-    <title>Own ChatGPT</title>
-  </head>
-  <body>
-    <div id="preloader"></div>
-    <div id="app">
-      <navbar>
-        <div class="wrap_navbar">
-          <div class="logo"><img src="assets/robot.png"></div>
-          <div class="title">God's Eye</div>
+    <link rel="preload" as="style" href="side-style.css">
+    <link rel="stylesheet" href="side-style.css">
+    <!-- TITLE -->
+    <title>God's Eye-Own ChatGPT</title>
+</head>
+
+<body>
+    <header role="banner" class="rishi-section-header">
+        <div class="rishi-layout-container">
+            <div class="rishi-section-header__layout rishi-layout-flex">
+                <!-- LOGO -->
+                <a href="#" role="link" aria-label="#" class="rishi-logo-section">
+                    <img src="assets/robot.png" alt="Logo_image" class="logo">
+                    <p class="site_title">God's Eye</p>
+                </a>
+                <!-- MENU -->
+                <a href="https://github.com/Himanshu-Rishi/God-s-Eye-I-know-everything" role="link" aria-label="#">
+                    <i class="uil uil-github"></i>
+                </a>
+            </div>
         </div>
-      </navbar>
-      <div id="chat_container">
-      </div>
-      <form>
-        <textarea name="prompt" placeholder="Ask God's eye" cols="1" rows="1"></textarea>
-        <button type="submit" ><i class="uil uil-message send__icon"></i></button>
-      </form>
-    </div>
-    <script type="module" src="script.js"></script>
-  </body>
+    </header>
+    <main role="main">
+        <section class="rishi-section-hero">
+            <div class="rishi-layout-container">
+                <div class="rishi-layout-column-6 rishi-layout-column-center">
+                    <h1>Own ChatGPT.</h1>
+                    <p class="rishi-text-intro">God's eye is a Open AI based application which work same like ChatGPT. You can ask anything to god's eye</p>
+                    <div class="button_section">
+                        <button><a class="first__button" href="second_page.html">Let's Go </a></button>
+                        <button><a href="#contact" class="second__button">Contact Us</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="rishi-section-content">
+            <div class="rishi-layout-container">
+                <div class="rishi-section-content__layout rishi-layout-grid rishi-layout-grid-2">
+                    <div class="rishi-component-card rishi-layout-column-4">
+                        <img src="assets/message.png" alt="#"
+                            loading="lazy" class="rishi-component-card--image">
+                        <h4 class="rishi-component-card--title">A No-Code Visual Flow Builder.</h4>
+                        <p>Without coding proficiency, you can now construct a powerful bot that starts delivering benefits from day one.</p>
+                    </div>
+                    <div class="rishi-component-card rishi-layout-column-4">
+                        <img src="assets/chat.png" alt="#"
+                            loading="lazy" class="rishi-component-card--image">
+                        <h4 class="rishi-component-card--title">Omnichannel Messaging.</h4>
+                        <p>The Best AI Chatbot recalls past interactions with every user over every channel—whether online, via SMS, web portal, or
+                        phone.</p>
+                    </div>
+                    <div class="rishi-component-card rishi-layout-column-4">
+                        <img src="assets/ai.png" alt="#"
+                            loading="lazy" class="rishi-component-card--image">
+                        <h4 class="rishi-component-card--title">Unsupervised AI Learning.</h4>
+                        <p>Unsupervised AI learning is at the foundation of the Best AI Chatbot. Apple’s Siri and Amazon’s Alexa are examples of
+                        consumer-oriented, data-driven, predictive chatbots.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="rishi-section-close contact" id="contact">
+            <div class="rishi-layout-container">
+                <div class="rishi-layout-column-6 rishi-layout-column-center">
+                    <h2>Want to know more ?</h2>
+                    <p class="rishi-text-intro">We will contact you through this mail asap.</p>
+                    <!-- CTA -->
+                    <div class="rishi-component-cta rishi-layout-flex">
+                        <form action="#" class="rishi-component-form rishi-layout-grid rishi-layout-column-4">
+                            <input type="email" placeholder="Email" class="rishi-component-input rishi-component-input-medium"
+                                required>
+                            <button type="submit"
+                                class="rishi-component-button rishi-component-button-medium rishi-component-button-primary"><i class="uil uil-message"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo" class="rishi-section-footer">
+        <div class="rishi-layout-container">
+            <div class="rishi-section-footer__layout rishi-layout-flex">
+                <!-- COPYRIGHT -->
+                <p class="rishi-section-footer--copyright rishi-text-note"><small>&copy; Made by Himanshu Rishi by ♥️</small></p>
+                <!-- MENU -->
+                <a href="#" role="link" aria-label="#" class="rishi-text-note"><small>Features</small></a>
+                <a href="#" role="link" aria-label="#" class="rishi-text-note"><small>Help</small></a>
+                <a href="#" role="link" aria-label="#" class="rishi-text-note"><small>Terms</small></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>
- 
